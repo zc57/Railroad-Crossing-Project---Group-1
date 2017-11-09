@@ -1,6 +1,7 @@
 #include <iostream>
 #include "PressurePad.h"
 #include "TrainDetector.h"
+#include "TrainCrossingLights.h"
 #include "TrainBar.h"
 using namespace std;
 
@@ -20,6 +21,12 @@ int main () {
 	trainOut.getLightstatus();
 	light.flash();
 	tb.raiseBar();
+
+    TrainCrossingLights train, crossingLight;
+    train.notrainWeightDetected();
+	train.trainWeightDetected();
+	crossingLight.flash();
+
 	cin.get(); //Prevents window closing when running from executable
 	return 0;
 }
