@@ -20,6 +20,6 @@ int main () {
 	trainOut.getLightstatus();
 	light.flash();
 	tb.raiseBar();
-	cin.get();
+	cin.get(); //Prevents window closing when running from executable
 	return 0;
 }
