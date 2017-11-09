@@ -26,10 +26,12 @@
 		</Compiler>
 		<Unit filename="include/PressurePad.h" />
 		<Unit filename="include/TrainBar.h" />
+		<Unit filename="include/TrainCrossingLights.h" />
 		<Unit filename="include/TrainDetector.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/PressurePad.cpp" />
 		<Unit filename="src/TrainBar.cpp" />
+		<Unit filename="src/TrainCrossingLights.cpp" />
 		<Unit filename="src/TrainDetector.cpp" />
 		<Extensions>
 			<code_completion />
