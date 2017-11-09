@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1510248435 source:c:\users\chris\desktop\railroadcross\railroadcross\main.cpp
+	<iostream>
+	"PressurePad.h"
+	"TrainDetector.h"
+	"TrainBar.h"
+
+1510247791 c:\users\chris\desktop\railroadcross\railroadcross\include\pressurepad.h
+
+1510247890 source:c:\users\chris\desktop\railroadcross\railroadcross\src\pressurepad.cpp
+	"PressurePad.h"
+	<iostream>
+
+1510248031 source:c:\users\chris\desktop\railroadcross\railroadcross\src\traindetector.cpp
+	<iostream>
+	"TrainDetector.h"
+
+1510248005 c:\users\chris\desktop\railroadcross\railroadcross\include\traindetector.h
+
+1510248107 c:\users\chris\desktop\railroadcross\railroadcross\include\trainbar.h
+
+1510248105 source:c:\users\chris\desktop\railroadcross\railroadcross\src\trainbar.cpp
+	<iostream>
+	"TrainBar.h"
+
