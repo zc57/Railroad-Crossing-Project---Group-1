@@ -23,29 +23,35 @@
 	<iostream>
 	"TrainBar.h"
 
-1510249316 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\main.cpp
+1510429642 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\main.cpp
 	<iostream>
+	<vector>
 	"PressurePad.h"
 	"TrainDetector.h"
+	"TrainCrossingLights.h"
 	"TrainBar.h"
 
 1510247791 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\pressurepad.h
 
-1510248005 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\traindetector.h
+1510430974 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\traindetector.h
+	<vector>
+	"TrainBar.h"
 
-1510248107 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\trainbar.h
+1510429523 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\trainbar.h
 
 1510247890 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\pressurepad.cpp
 	"PressurePad.h"
 	<iostream>
 
-1510248105 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\trainbar.cpp
+1510430919 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\trainbar.cpp
 	<iostream>
 	"TrainBar.h"
 
-1510248031 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\traindetector.cpp
+1510430964 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\traindetector.cpp
 	<iostream>
+	<vector>
 	"TrainDetector.h"
+	"TrainBar.h"
 
 1510249744 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\traincrossinglights.cpp
 	"TrainCrossingLights.h"

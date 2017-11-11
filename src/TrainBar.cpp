@@ -2,11 +2,28 @@
 #include "TrainBar.h"
 using namespace std;
 
+TrainBar::TrainBar() {
+    this->id = 0;
+    this->lowered = false;
+}
+
+TrainBar::TrainBar(int id) {
+    this->id = id;
+    this->lowered = false;
+}
+
 void TrainBar::lowerBar() {
     lowered = true;
-    cout << "Bar lowered\n";
 }
+
 void TrainBar::raiseBar() {
     lowered = false;
-    cout << "Bar raised\n";
+}
+
+bool TrainBar::getStatus() {
+    return lowered;
+}
+
+int TrainBar::getID() {
+    return id;
 }
