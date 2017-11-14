@@ -1,0 +1,4 @@
+trainEnterAfter=1
+trainLength=3
+trainDetectorInDistance=2
+trainDetectorOutDistance=2

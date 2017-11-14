@@ -4,12 +4,12 @@ using namespace std;
 #include "TrainDetector.h"
 #include "TrainBar.h"
 
-TrainDetector::TrainDetector(bool inc, vector<TrainBar> &trainBarsVector) {
+TrainDetector::TrainDetector(bool inc, int dist, vector<TrainBar> &trainBarsVector) {
     this->incoming = inc;
     this->trainBars = &trainBarsVector;
     this->status = 0;
     this->light = 0;
-    this->distance = 2;
+    this->distance = dist;
 }
 
 bool TrainDetector::isIncoming() {
@@ -17,6 +17,7 @@ bool TrainDetector::isIncoming() {
 }
 
 void TrainDetector::detect() {
+    cout << "* Train Detector (" << (incoming ? "Incoming" : "Outgoing") << ") triggered.\n";
     status = incoming;
     for (TrainBar& tb : *trainBars) {
         if (incoming) tb.lowerBar();

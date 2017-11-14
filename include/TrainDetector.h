@@ -9,7 +9,7 @@ public:
     int distance;
     vector<TrainBar> *trainBars;
 
-    TrainDetector(bool, vector<TrainBar>&);
+    TrainDetector(bool, int, vector<TrainBar>&);
 	bool isIncoming();
 	void detect();
 	void resetStatus();
