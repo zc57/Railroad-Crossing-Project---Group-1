@@ -3,10 +3,12 @@
 using namespace std;
 #include "TrainDetector.h"
 #include "TrainBar.h"
+#include "LightController.h"
 
-TrainDetector::TrainDetector(bool inc, int dist, vector<TrainBar> &trainBarsVector) {
+TrainDetector::TrainDetector(bool inc, int dist, vector<TrainBar> &trainBarsVector, LightController lc) {
     this->incoming = inc;
     this->trainBars = &trainBarsVector;
+    this->lightController = lc;
     this->status = 0;
     this->light = 0;
     this->distance = dist;
@@ -19,9 +21,16 @@ bool TrainDetector::isIncoming() {
 void TrainDetector::detect() {
     cout << "* Train Detector (" << (incoming ? "Incoming" : "Outgoing") << ") triggered.\n";
     status = incoming;
-    for (TrainBar& tb : *trainBars) {
-        if (incoming) tb.lowerBar();
-        else tb.raiseBar();
+    if (incoming) {
+        for (TrainBar& tb : *trainBars) {
+            tb.lowerBar();
+        }
+        lightController.setCrosswalkLights(false);
+	} else {
+        for (TrainBar& tb : *trainBars) {
+            tb.raiseBar();
+        }
+        lightController.setCrosswalkLights(true);
 	}
 }
 

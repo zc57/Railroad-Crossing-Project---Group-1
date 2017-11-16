@@ -1,4 +1,4 @@
 trainEnterAfter=1
 trainLength=3
-trainDetectorInDistance=2
-trainDetectorOutDistance=2
+trainDetectorInDistance=5
+trainDetectorOutDistance=5

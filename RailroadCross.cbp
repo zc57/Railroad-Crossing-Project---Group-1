@@ -24,11 +24,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/CrosswalkLight.h" />
+		<Unit filename="include/LightController.h" />
 		<Unit filename="include/PressurePad.h" />
 		<Unit filename="include/TrainBar.h" />
 		<Unit filename="include/TrainCrossingLights.h" />
 		<Unit filename="include/TrainDetector.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/CrosswalkLight.cpp" />
+		<Unit filename="src/LightController.cpp" />
 		<Unit filename="src/PressurePad.cpp" />
 		<Unit filename="src/TrainBar.cpp" />
 		<Unit filename="src/TrainCrossingLights.cpp" />

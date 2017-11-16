@@ -23,7 +23,7 @@
 	<iostream>
 	"TrainBar.h"
 
-1510679298 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\main.cpp
+1510811514 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\main.cpp
 	<iostream>
 	<fstream>
 	<vector>
@@ -31,12 +31,14 @@
 	"TrainDetector.h"
 	"TrainCrossingLights.h"
 	"TrainBar.h"
+	"CrosswalkLight.h"
 
 1510247791 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\pressurepad.h
 
-1510679309 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\traindetector.h
+1510810228 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\traindetector.h
 	<vector>
 	"TrainBar.h"
+	"LightController.h"
 
 1510429523 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\trainbar.h
 
@@ -48,11 +50,12 @@
 	<iostream>
 	"TrainBar.h"
 
-1510679688 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\traindetector.cpp
+1510810331 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\traindetector.cpp
 	<iostream>
 	<vector>
 	"TrainDetector.h"
 	"TrainBar.h"
+	"LightController.h"
 
 1510249744 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\traincrossinglights.cpp
 	"TrainCrossingLights.h"
@@ -65,4 +68,27 @@
 
 1510679196 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\trainoutgoingdetector.h
 	"TrainDetector.h"
+
+1510773800 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\crosswalklights.cpp
+	<iostream>
+	"CrosswalkLights.h"
+
+1510811016 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\crosswalklights.h
+	<iostream>
+
+1510811014 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\crosswalklight.cpp
+	<iostream>
+	"CrosswalkLights.h"
+
+1510810815 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\lightcontroller.cpp
+	"LightController.h"
+	<vector>
+	"CrosswalkLight.h"
+
+1510809819 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\lightcontroller.h
+	<vector>
+	"CrosswalkLight.h"
+
+1510811032 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\crosswalklight.h
+	<iostream>
 
