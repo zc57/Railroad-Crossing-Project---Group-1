@@ -1,15 +1,14 @@
 #ifndef TRAINDETECTOR_H
 #define TRAINDETECTOR_H
 #include <vector>
+using std::vector;
 #include "TrainBar.h"
 #include "LightController.h"
-using namespace std;
 
 class TrainDetector
 {
 public:
     int distance;
-
 
     TrainDetector(bool, int, vector<TrainBar>&, LightController);
 	bool isIncoming();

@@ -7,9 +7,9 @@
 //
 
 #include <iostream>
-#include "CrosswalkLights.h"
-
-using namespace std;
+using std::cout;
+using std::endl;
+#include "CrosswalkLight.h"
 
     // Constructors
 CrosswalkLight::CrosswalkLight() : status(false), identifier(0) { }
@@ -26,14 +26,8 @@ void CrosswalkLight::setStatus(bool newStatus) {
     status = newStatus;
     if(newStatus) {
         cout << "* Crosswalk Status changed to: Walk" << endl;
-        //cout << "Crosswalk Signal Changed!" << endl;
-        //cout << "Crosswalk Signal ID: " << identifier << endl;
-        //cout << "Crosswalk Status: Walk" << endl;
     } else {
         cout << "* Crosswalk Status changed to: Stop" << endl;
-        //cout << "Crosswalk Signal Changed!" << endl;
-        //cout << "Crosswalk Signal ID: " << identifier << endl;
-        //cout << "Crosswalk Status: Do Not Walk" << endl;
     }
 }
 

@@ -9,8 +9,6 @@
 #ifndef CrosswalkLights_h
 #define CrosswalkLights_h
 
-#include <iostream>
-
 class CrosswalkLight {
 public:
     CrosswalkLight();

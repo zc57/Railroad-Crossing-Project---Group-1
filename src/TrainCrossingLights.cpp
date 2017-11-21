@@ -1,24 +1,13 @@
 #include "TrainCrossingLights.h"
-#include <iostream>
-using namespace std;
 
-
-void TrainCrossingLights::trainWeightDetected(){
-    trainWeight = true;
-    cout << "There has been a train detected in the area and a signal will be sent to the lights" <<endl;
+TrainCrossingLights::TrainCrossingLights() {
+    status = false;
 }
 
-void TrainCrossingLights::notrainWeightDetected() {
-    trainWeight = false;
-    cout << "No train" << endl;
+bool TrainCrossingLights::getStatus() {
+    return status;
 }
 
-void TrainCrossingLights::flash(){
-   if (trainWeight >= 20) {
-        light = 0;
-        cout<< "The lights would start to flash when train approaches" <<endl;
-    } else {
-        cout<< "The lights wouldn't flash" <<endl;
-    }
+void TrainCrossingLights::setStatus(bool b) {
+    status = b;
 }
-

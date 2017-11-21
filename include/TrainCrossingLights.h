@@ -3,13 +3,11 @@
 
 class TrainCrossingLights{
  private:
-    bool trainWeight;
-    int timer;
-    int light;
+    bool status;
  public:
-    void trainWeightDetected();
-    void notrainWeightDetected();
-    void flash();
+    TrainCrossingLights();
+    bool getStatus();
+    void setStatus(bool);
 };
 
 

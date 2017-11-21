@@ -5,93 +5,13 @@ using namespace std;
 #include "PressurePad.h"
 #include "TrainDetector.h"
 #include "TrainCrossingLights.h"
+#include "TrafficLight.h"
 #include "TrainBar.h"
 #include "CrosswalkLight.h"
-
-class Actor {
-public:
-    string name;
-    bool inIntersection;
-    bool isActive;
-    virtual void update(int) = 0;
-    virtual void remove() = 0;
-};
-
-class Pedestrian : public Actor {
-public:
-    CrosswalkLight destinationLight;
-    int lengthToClear;
-
-    Pedestrian() {};
-    Pedestrian(int len, CrosswalkLight &destLight) {
-        name = "Pedestrian";
-        isActive = true;
-        inIntersection = false;
-        lengthToClear = len;
-        destinationLight = &destLight;
-        hitIntersectionAt = 0;
-    }
-
-    void update(int s) {
-        if (!isActive) return;
-        if (!inIntersection && destinationLight.getStatus()) {
-            cout << "* Pedestrian entered intersection" << endl;
-            inIntersection = true;
-            hitIntersectionAt = s;
-        } else if (s == hitIntersectionAt + lengthToClear) {
-            cout << "* Pedestrian exited intersection" << endl;
-            inIntersection = false;
-            remove();
-        }
-    }
-
-    void remove() {
-        isActive = false;
-    }
-
-private:
-    int hitIntersectionAt;
-};
-
-class Train : public Actor {
-public:
-    int length;
-    int enterAfter;
-    TrainDetector *detectorIn, *detectorOut;
-
-    Train() {};
-    Train(int enterAfterSeconds, int l, TrainDetector &detIn, TrainDetector &detOut) {
-        name = "Train";
-        isActive = true;
-        inIntersection = false;
-        length = l;
-        enterAfter = enterAfterSeconds;
-        detectorIn = &detIn;
-        detectorOut = &detOut;
-    }
-
-    void update(int s) {
-        if (!isActive) return;
-        if (s == enterAfter) {
-            detectorIn->detect();
-        } else if (s == enterAfter + detectorIn->distance) {
-            cout << "* Train entered Intersection" << endl;
-            inIntersection = true;
-            hitIntersectionAt = s;
-        } else if (s == hitIntersectionAt + length) {
-            detectorOut->detect();
-            detectorIn->resetStatus();
-            inIntersection = false;
-            remove();
-        }
-    }
-
-    void remove() {
-        isActive = false;
-    }
-private:
-    int hitIntersectionAt;
-};
+#include "Actor.h"
+#include "Pedestrian.h"
+#include "Train.h"
+#include "Car.h"
 
 int main () {
     int trainEnterAfter = 0;
@@ -130,6 +50,7 @@ int main () {
 	trainBars.push_back(tb5);
 	trainBars.push_back(tb6);
 
+// Lights
 	// Crosswalk Lights
 	vector<CrosswalkLight> crosswalkLights(0);
 	CrosswalkLight crossLight1 = CrosswalkLight(true, 1);
@@ -149,12 +70,32 @@ int main () {
 	crosswalkLights.push_back(crossLight7);
 	crosswalkLights.push_back(crossLight8);
 
-	LightController lc(crosswalkLights);
+    // Train Crossing Lights
+	vector<TrainCrossingLights> trainLights(0);
+	TrainCrossingLights tcl;
+	trainLights.push_back(tcl);
 
+	// Traffic Lights
+	vector<TrafficLight> trafficLights(0);
+	TrafficLight tfn = TrafficLight("N");
+	TrafficLight tfs = TrafficLight("S");
+	TrafficLight tfe = TrafficLight("E");
+	TrafficLight tfw = TrafficLight("W");
+	trafficLights.push_back(tfn);
+	trafficLights.push_back(tfs);
+	trafficLights.push_back(tfe);
+	trafficLights.push_back(tfw);
+
+    // Light Controller
+	LightController lc(crosswalkLights, trainLights);
+
+
+// Detectors
 	// Train Detectors
 	TrainDetector trainIn(true, trainDetectorInDistance, trainBars, lc);
 	TrainDetector trainOut(false, trainDetectorOutDistance, trainBars, lc);
 
+// Actors
     // Train
 	Train train = Train(trainEnterAfter, trainLength, trainIn, trainOut);
 
@@ -163,22 +104,40 @@ int main () {
     pedestrians.push_back(new Pedestrian(4, crossLight1));
     pedestrians.push_back(new Pedestrian(2, crossLight2));
 
-	int s = 0; //Seconds
+    // Cars
+    vector<Car*> cars(0);
+    //cars.push_back(new Car());
+
+	int s = 0; //Steps/Seconds
 	bool intersectionActive = true;
     while (intersectionActive) {
-        cout << " STEP " << s << endl;
+        cout << " STEP " << s << " (seconds)" << endl;
         train.update(s);
         for (Pedestrian *pedest : pedestrians) {
             pedest->update(s);
         }
         cout << "Train Detector (In) : " << trainIn.getLightstatus() << endl;
         cout << "Train Detector (Out): " << trainOut.getLightstatus() << endl;
+        cout << "Train Bars: ";
         for (TrainBar tb : trainBars) {
-            cout << "Train Bar " << tb.getID() << ": " << (tb.getStatus() ? "Lowered" : "Raised") << endl;
+            cout << tb.getID() << "[" << (tb.getStatus() ? "-" : "/") << "] ";
+            //cout << "Train Bar " << tb.getID() << ": " << (tb.getStatus() ? "Lowered" : "Raised") << endl;
         }
+        cout << endl;
+        cout << "Crosswalk Lights: ";
         for (CrosswalkLight cl : crosswalkLights) {
-            cout << "Crosswalk Light " << cl.getIdentifier() << ": " << (cl.getStatus() ? "Walk" : "Stop") << endl;
+            cout << cl.getIdentifier() << " " << (cl.getStatus() ? "W" : "X") << " | ";
+            //cout << "Crosswalk Light " << cl.getIdentifier() << ": " << (cl.getStatus() ? "Walk" : "Stop") << endl;
         }
+        cout << endl;
+        for (TrainCrossingLights tcl : trainLights) {
+            cout << "Train Crossing Light: " << (tcl.getStatus() ? "Flashing" : "Off") << endl;
+        }
+        cout << "Traffic Lights: ";
+        for (TrafficLight tl : trafficLights) {
+            cout << "[" << tl.getID() << ": " << tl.getStatusString() << "] ";
+        }
+        cout << endl;
         intersectionActive = false;
         cout << "- In Intersection: " << endl;
         try {

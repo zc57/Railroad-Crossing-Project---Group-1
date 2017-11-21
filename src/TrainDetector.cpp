@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
-using namespace std;
+using std::cout;
+using std::endl;
+using std::vector;
 #include "TrainDetector.h"
 #include "TrainBar.h"
 #include "LightController.h"
@@ -26,11 +28,13 @@ void TrainDetector::detect() {
             tb.lowerBar();
         }
         lightController.setCrosswalkLights(false);
+        lightController.toggleTrainLights();
 	} else {
         for (TrainBar& tb : *trainBars) {
             tb.raiseBar();
         }
         lightController.setCrosswalkLights(true);
+        lightController.toggleTrainLights();
 	}
 }
 
@@ -44,7 +48,7 @@ bool TrainDetector::getStatus() { // Controller Object
 
 void TrainDetector::setRed() {
     //incoming = true;
-    if (incoming = true) {
+    if (incoming) {
         light = 0;
         cout << "TRAIN DETECTED!! Set all lights to red, including crosswalks" << endl;
         cout << "Lights should be set to: " << light << endl;

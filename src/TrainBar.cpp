@@ -1,6 +1,4 @@
-#include <iostream>
 #include "TrainBar.h"
-using namespace std;
 
 TrainBar::TrainBar() {
     this->id = 0;
