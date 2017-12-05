@@ -53,7 +53,7 @@ void LightController::trainIncoming() {
 }
 
 void LightController::trainOutgoing() {
-    setCrosswalkLights(true);
+    //setCrosswalkLights(true);
     toggleTrainLights();
 }
 

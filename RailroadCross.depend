@@ -23,7 +23,7 @@
 	<iostream>
 	"TrainBar.h"
 
-1511284668 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\main.cpp
+1512457841 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\main.cpp
 	<iostream>
 	<fstream>
 	<vector>
@@ -45,7 +45,7 @@
 	"TrainBar.h"
 	"LightController.h"
 
-1510429523 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\trainbar.h
+1512457841 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\trainbar.h
 
 1510247890 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\pressurepad.cpp
 	"PressurePad.h"
@@ -54,7 +54,7 @@
 1511282794 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\trainbar.cpp
 	"TrainBar.h"
 
-1511282849 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\traindetector.cpp
+1512457841 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\traindetector.cpp
 	<iostream>
 	<vector>
 	"TrainDetector.h"
@@ -83,19 +83,21 @@
 	<iostream>
 	"CrosswalkLight.h"
 
-1511282757 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\lightcontroller.cpp
+1512459427 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\lightcontroller.cpp
 	<vector>
+	<iostream>
 	"LightController.h"
 	"CrosswalkLight.h"
 
-1511282777 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\lightcontroller.h
+1512457841 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\lightcontroller.h
 	<vector>
 	"CrosswalkLight.h"
 	"TrainCrossingLights.h"
+	"TrafficLight.h"
 
 1511282698 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\crosswalklight.h
 
-1511284717 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\trafficlight.cpp
+1512457841 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\trafficlight.cpp
 	"TrafficLight.h"
 
 1511284689 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\trafficlight.h
@@ -107,11 +109,11 @@
 1511282471 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\actor.cpp
 	"Actor.h"
 
-1511282645 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\pedestrian.h
+1512457841 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\pedestrian.h
 	"Actor.h"
 	"CrosswalkLight.h"
 
-1511282667 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\pedestrian.cpp
+1512459335 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\pedestrian.cpp
 	"Pedestrian.h"
 	<iostream>
 
@@ -123,11 +125,13 @@
 	<iostream>
 	"Train.h"
 
-1511283058 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\car.cpp
+1512459225 source:c:\users\chris\documents\github\railroad-crossing-project---group-1\src\car.cpp
+	<iostream>
 	"Car.h"
 
-1511283045 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\car.h
+1512457841 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\car.h
 	"Actor.h"
+	"TrafficLight.h"
 
 1512068422 source:c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\main.cpp
 	<iostream>

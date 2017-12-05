@@ -3,14 +3,12 @@ using std::cout;
 using std::endl;
 #include "Car.h"
 
-Car::Car(int len, TrafficLight *destLight) {
+Car::Car(int len, TrafficLight *destLight)
+    : lengthToClear(len), destinationLight(destLight), hitIntersectionAt(1000) {
     name = "Car";
     isActive = true;
     inIntersection = false;
-    hitIntersectionAt = 0;
-    destinationLight = destLight;
-    lengthToClear = len;
-}
+    }
 
 void Car::update(int s) {
     if (!isActive) return;
