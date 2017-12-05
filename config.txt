@@ -2,3 +2,4 @@ trainEnterAfter=1
 trainLength=3
 trainDetectorInDistance=5
 trainDetectorOutDistance=5
+secBetweenLights=5

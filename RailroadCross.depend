@@ -129,3 +129,100 @@
 1511283045 c:\users\chris\documents\github\railroad-crossing-project---group-1\include\car.h
 	"Actor.h"
 
+1512068422 source:c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	"PressurePad.h"
+	"TrainDetector.h"
+	"TrainCrossingLights.h"
+	"TrafficLight.h"
+	"TrainBar.h"
+	"CrosswalkLight.h"
+	"Actor.h"
+	"Pedestrian.h"
+	"Train.h"
+	"Car.h"
+
+1510252878 c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\include\pressurepad.h
+
+1511289451 c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\include\traindetector.h
+	<vector>
+	"TrainBar.h"
+	"LightController.h"
+
+1511296921 c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\include\trainbar.h
+
+1512073288 c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\include\lightcontroller.h
+	<vector>
+	"CrosswalkLight.h"
+	"TrainCrossingLights.h"
+	"TrafficLight.h"
+
+1511289451 c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\include\crosswalklight.h
+
+1511289451 c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\include\traincrossinglights.h
+
+1511290863 c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\include\trafficlight.h
+	<string>
+
+1511289451 c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\include\actor.h
+	<string>
+
+1512068091 c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\include\pedestrian.h
+	"Actor.h"
+	"CrosswalkLight.h"
+
+1511289451 c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\include\train.h
+	"Actor.h"
+	"TrainDetector.h"
+
+1511992815 c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\include\car.h
+	"Actor.h"
+	"TrafficLight.h"
+
+1512068172 source:c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\src\crosswalklight.cpp
+	<iostream>
+	"CrosswalkLight.h"
+
+1512075024 source:c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\src\lightcontroller.cpp
+	<vector>
+	<iostream>
+	"LightController.h"
+	"CrosswalkLight.h"
+
+1510252878 source:c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\src\pressurepad.cpp
+	"PressurePad.h"
+	<iostream>
+
+1511289451 source:c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\src\trainbar.cpp
+	"TrainBar.h"
+
+1511289451 source:c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\src\traincrossinglights.cpp
+	"TrainCrossingLights.h"
+
+1511296463 source:c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\src\traindetector.cpp
+	<iostream>
+	<vector>
+	"TrainDetector.h"
+	"TrainBar.h"
+	"LightController.h"
+
+1511289451 source:c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\src\actor.cpp
+	"Actor.h"
+
+1512075065 source:c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\src\car.cpp
+	<iostream>
+	"Car.h"
+
+1512068102 source:c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\src\pedestrian.cpp
+	"Pedestrian.h"
+	<iostream>
+
+1511289451 source:c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\src\train.cpp
+	<iostream>
+	"Train.h"
+
+1511290896 source:c:\users\chris-lap\documents\github\railroad-crossing-project---group-1\src\trafficlight.cpp
+	"TrafficLight.h"
+

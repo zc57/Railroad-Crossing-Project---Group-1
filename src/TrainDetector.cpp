@@ -27,14 +27,12 @@ void TrainDetector::detect() {
         for (TrainBar& tb : *trainBars) {
             tb.lowerBar();
         }
-        lightController.setCrosswalkLights(false);
-        lightController.toggleTrainLights();
+        lightController.trainIncoming();
 	} else {
         for (TrainBar& tb : *trainBars) {
             tb.raiseBar();
         }
-        lightController.setCrosswalkLights(true);
-        lightController.toggleTrainLights();
+        lightController.trainOutgoing();
 	}
 }
 

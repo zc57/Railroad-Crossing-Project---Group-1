@@ -24,16 +24,26 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Actor.h" />
+		<Unit filename="include/Car.h" />
 		<Unit filename="include/CrosswalkLight.h" />
 		<Unit filename="include/LightController.h" />
+		<Unit filename="include/Pedestrian.h" />
 		<Unit filename="include/PressurePad.h" />
+		<Unit filename="include/TrafficLight.h" />
+		<Unit filename="include/Train.h" />
 		<Unit filename="include/TrainBar.h" />
 		<Unit filename="include/TrainCrossingLights.h" />
 		<Unit filename="include/TrainDetector.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Actor.cpp" />
+		<Unit filename="src/Car.cpp" />
 		<Unit filename="src/CrosswalkLight.cpp" />
 		<Unit filename="src/LightController.cpp" />
+		<Unit filename="src/Pedestrian.cpp" />
 		<Unit filename="src/PressurePad.cpp" />
+		<Unit filename="src/TrafficLight.cpp" />
+		<Unit filename="src/Train.cpp" />
 		<Unit filename="src/TrainBar.cpp" />
 		<Unit filename="src/TrainCrossingLights.cpp" />
 		<Unit filename="src/TrainDetector.cpp" />

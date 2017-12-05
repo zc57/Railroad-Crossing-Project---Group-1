@@ -3,9 +3,6 @@
 
 class TrainBar
 {
-private:
-	int id;
-	bool lowered;
 public:
     TrainBar();
     TrainBar(int);
@@ -13,6 +10,10 @@ public:
 	void raiseBar();
 	bool getStatus();
 	int getID();
+
+private:
+	int id;
+	bool lowered;
 };
 
 #endif // TRAINBAR_H

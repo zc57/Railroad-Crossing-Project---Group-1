@@ -1,5 +1,7 @@
 #include "TrafficLight.h"
 
+TrafficLight::TrafficLight() {};
+
 TrafficLight::TrafficLight(string s)
 {
     id = s;
