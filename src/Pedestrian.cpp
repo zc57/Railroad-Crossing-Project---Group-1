@@ -17,7 +17,6 @@ void Pedestrian::update(int s) {
         inIntersection = true;
         this->hitIntersectionAt = s;
     } else if (s == hitIntersectionAt + lengthToClear) {
-        cout << hitIntersectionAt << " " << lengthToClear << endl;
         cout << "* Pedestrian exited intersection" << endl;
         inIntersection = false;
         remove();
